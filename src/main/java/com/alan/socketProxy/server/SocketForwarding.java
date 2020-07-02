@@ -1,4 +1,4 @@
-package com.alan.socketProxy.server;
+package com.alan.socketproxy.server;
 
 import java.io.IOException;
 import java.io.InputStream;

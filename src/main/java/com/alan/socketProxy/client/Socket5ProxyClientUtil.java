@@ -1,4 +1,4 @@
-package com.alan.socketProxy.client;
+package com.alan.socketproxy.client;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

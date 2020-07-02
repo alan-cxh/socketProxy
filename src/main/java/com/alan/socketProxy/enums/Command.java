@@ -1,4 +1,4 @@
-package com.alan.socketProxy.enums;
+package com.alan.socketproxy.enums;
 
 /**
  * @author chenxinhui

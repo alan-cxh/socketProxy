@@ -1,9 +1,9 @@
-package com.alan.socketProxy.server;
+package com.alan.socketproxy.server;
 
-import com.alan.socketProxy.enums.AddressType;
-import com.alan.socketProxy.enums.Command;
-import com.alan.socketProxy.enums.CommandStatus;
-import com.alan.socketProxy.enums.Method;
+import com.alan.socketproxy.enums.AddressType;
+import com.alan.socketproxy.enums.Command;
+import com.alan.socketproxy.enums.CommandStatus;
+import com.alan.socketproxy.enums.Method;
 import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
