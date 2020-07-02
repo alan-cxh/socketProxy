@@ -70,7 +70,7 @@ public class SocketForwarding {
                 }
 
                 // 会话最多30秒超时，防止有人占着线程老不释放
-                if (System.currentTimeMillis() - start > 30 * 1000) {
+                if (System.currentTimeMillis() - start > 30_000) {
                     transientLog("time out");
                     break;
                 }
@@ -87,17 +87,17 @@ public class SocketForwarding {
         } catch (IOException e) {
             transientLog("conn exception" + e.getMessage());
         } finally {
-            Socks5ProxyServer.close(clientIs);
-            Socks5ProxyServer.close(clientOs);
-            Socks5ProxyServer.close(targetIs);
-            Socks5ProxyServer.close(targetOs);
-            Socks5ProxyServer.close(clientSocket);
-            Socks5ProxyServer.close(targetSocket);
+            ServerHandler.close(clientIs);
+            ServerHandler.close(clientOs);
+            ServerHandler.close(targetIs);
+            ServerHandler.close(targetOs);
+            ServerHandler.close(clientSocket);
+            ServerHandler.close(targetSocket);
         }
         transientLog("done.");
     }
 
     private void transientLog(String format, Object... args) {
-        Socks5ProxyServer.log("forwarding, clientIp=" + clientIp + ", targetAddress=" + targetAddress + ", port=" + targetPort + ", " + format, args);
+        ServerHandler.log("forwarding, clientIp=" + clientIp + ", targetAddress=" + targetAddress + ", port=" + targetPort + ", " + format, args);
     }
 }
