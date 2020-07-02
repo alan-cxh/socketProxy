@@ -70,7 +70,7 @@ public class SocketForwarding {
                 }
 
                 // 会话最多30秒超时，防止有人占着线程老不释放
-                if (System.currentTimeMillis() - start > 30_000) {
+                if (System.currentTimeMillis() - start > 30 * 1000) {
                     transientLog("time out");
                     break;
                 }
